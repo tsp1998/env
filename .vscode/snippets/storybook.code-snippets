@@ -1,0 +1,25 @@
+{
+	"storybookReact": {
+		"prefix": [
+			"sbr",
+			"storybookReact"
+		],
+		"body": [
+			"import React from 'react';",
+			"import ${2:Component} from '${1:componentPath}';",
+			"//models",
+			"import { Meta, Story } from '@storybook/react';",
+			"//import { ${2:Component}PropsModel } from '${1:componentPath}.models'\n",
+			"const meta: Meta<${3:ComponentPropsModel}> = {",
+			"\ttitle: '${2:Component}',",
+			"\tcomponent: ${2:Component},",
+			"};",
+			"export default meta;\n",
+			"const Template: Story<${3:ComponentPropsModel}> = (args) => <${2:Component} {...args} />;\n",
+			"export const Default${2:Component} = Template.bind({});",
+			"Default${2:Component}.args = {",
+			"\t$4",
+			"};",
+		]
+	}
+}

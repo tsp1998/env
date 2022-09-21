@@ -1,0 +1,16 @@
+{
+	"actionCreator": {
+		"prefix": [
+			"actionCreator",
+			"rdxac"
+		],
+		"body": [
+			"export const ${1:actionCreatorName} = (",
+			"\t${4:params}",
+			"): ${2:ReturnType} => ({",
+			"\ttype: ${3:TYPE},",
+			"\tpayload: {$5}",
+			"})"
+		]
+	}
+}

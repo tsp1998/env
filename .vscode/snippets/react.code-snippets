@@ -1,0 +1,185 @@
+{
+	"cdm": {
+		"prefix": "cdm",
+		"body": "componentDidMount = () => {$1}"
+	},
+	"ren": {
+		"prefix": "ren",
+		"body": [
+			"render() {",
+			"\treturn($1) ",
+			"}"
+		]
+	},
+	"sst": {
+		"prefix": "sst",
+		"body": "this.setState({ $1 })"
+	},
+	"ssf": {
+		"prefix": "ssf",
+		"body": "this.setState((state, props) => {$1})"
+	},
+	"props": {
+		"prefix": "props",
+		"body": "this.props.${1:propName}"
+	},
+	"state": {
+		"prefix": "state",
+		"body": "this.state.${1:stateName}"
+	},
+	"functional component": {
+		"prefix": "rfce",
+		"body": [
+			"import React from 'react'\n",
+			"function ${1:ComponentName}() {",
+			"\treturn (",
+			"\t\t<div>",
+			"\t\t\t$2",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"\nexport default ${1:ComponentName}",
+		]
+	},
+	"functional component (arrow)": {
+		"prefix": "rafce",
+		"body": [
+			"import React from 'react'\n",
+			"const ${1:ComponentName} = () => {",
+			"\treturn (",
+			"\t\t<div>",
+			"\t\t\t$2",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"\nexport default ${1:ComponentName}"
+		]
+	},
+	"functional component (named export arrow)": {
+		"prefix": "rafc",
+		"body": [
+			"export const ${1:ComponentName} = () => {",
+			"\treturn <div>$0</div>",
+			"}",
+		]
+	},
+	"functional component (named + default export arrow with redux)": {
+		"prefix": "rfcredux",
+		"body": [
+			"import React from 'react'\n",
+			"import { connect } from 'react-redux'",
+			"\nexport const ${1:ComponentName} = () => {",
+			"\treturn <div>$2</div>",
+			"}",
+			"\nconst mapStateToProps = (state) => ({})",
+			"\nconst mapDispatchToProps = {}",
+			"\nexport default connect(mapStateToProps, mapDispatchToProps)(${1:ComponentName})",
+		]
+	},
+	"functional component (named + default export arrow with redux)": {
+		"prefix": "stest",
+		"body": [
+			"import React from 'react'\n",
+			"import renderer from 'react-test-renderer'",
+			"\nimport ${1:ComponentName} from '../${1:ComponentName}'",
+			"describe('<${1:ComponentName} />', () => {",
+			"\tconst defaultProps = {}",
+			"\tconst wrapper = renderer.create(<${1:ComponentName} { ...defaultProps } />)",
+			"\ttest('render', () => {",
+			"\t\texpect(wrapper).toMatchSnapshot()",
+			"\t})",
+			"})",
+		]
+	},
+	"class component (named + default export)": {
+		"prefix": "rce",
+		"body": [
+			"import React, { Component } from 'react'",
+			"\nexport class ${1:ComponentName} extends Component {",
+			"\trender() {",
+			"\t\treturn (",
+			"\t\t\t<div>",
+			"\t\t\t\t$2",
+			"\t\t\t</div>",
+			"\t\t)",
+			"\t}",
+			"}",
+			"\nexport default ${1:ComponentName}",
+		]
+	},
+	"class component (default export)": {
+		"prefix": "rcc",
+		"body": [
+			"import React, { Component } from 'react'",
+			"\nexport default class ${1:ComponentName} extends Component {",
+			"\trender() {",
+			"\t\treturn (",
+			"\t\t\t<div>",
+			"\t\t\t\t$2",
+			"\t\t\t</div>",
+			"\t\t)",
+			"\t}",
+			"}"
+		]
+	},
+	"redux mapState and mapDispatch": {
+		"prefix": "reduxmap",
+		"body": [
+			"const mapStateToProps = (state) => ({",
+			"\t$1",
+			"})",
+			"\nconst mapDispatchToProps = {",
+			"\t$2",
+			"}",
+		]
+	},
+	"style-component": {
+		"prefix": "safce",
+		"body": [
+			"import React from 'react'\n",
+			"//styles",
+			"import styled from 'styled-components'",
+			"const $1Styled = styled.div`",
+			"\t",
+			"`\n",
+			"const $1 = () => {",
+			"\treturn (",
+			"\t\t<$1Styled>",
+			"\t\t\t$2",
+			"\t\t</$1Styled>",
+			"\t)",
+			"}\n",
+			"export default $1"
+		]
+	},
+	"styledCompImport": {
+		"body": [
+			"import styled from 'styled-components'"
+		],
+		"prefix": "imsc"
+	},
+	"styledCompNamedImport": {
+		"body": [
+			"import { $1 } from 'styled-components'"
+		],
+		"prefix": "imsd"
+	},
+	"styledCompWithNamedImport": {
+		"body": [
+			"import styled, { $1 } from 'styled-components'"
+		],
+		"prefix": "imscd"
+	},
+	"styledComp": {
+		"body": [
+			"const $1 = styled$2`",
+			"\t$3",
+			"`"
+		],
+		"prefix": "sc"
+	},
+	"styledCompProp": {
+		"body": "${({ $1 }) => $2}",
+		"prefix": "scp"
+	}
+}
