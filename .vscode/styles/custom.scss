@@ -1,0 +1,26 @@
+.sidebar .monaco-list-row {
+  font-size: 16px;
+}
+
+.sidebar .codicon {
+  font-size: 20px;
+  filter: brightness(1.5);
+}
+
+.sidebar .monaco-icon-label:before {
+  background-size: 19px;
+}
+
+.sidebar .monaco-list-rows {
+  // @for $i from 0 to 24 {
+  //   :nth-child(#{$i}) {
+  //     // top: #{25 * $i}px !important;
+  //     // height: #{30 * $i}px !important;
+  //     // overflow: unset;
+  //     // color: aqua;
+  //   }
+  // }
+  .label-name {
+    filter: brightness(1.5);
+  }
+}
