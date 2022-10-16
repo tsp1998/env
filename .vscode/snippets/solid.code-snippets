@@ -1,0 +1,16 @@
+{
+  "functional component (arrow)": {
+    "prefix": "sofce",
+    "body": [
+      "import type { Component } from 'solid-js'\n",
+      "\nconst ${1:ComponentName}: Component<${2:PropsType}> = props => {",
+      "\treturn (",
+      "\t\t<div${3: class=''}>",
+      "\t\t\t$4",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "\nexport default ${1:ComponentName}"
+    ]
+  }
+}

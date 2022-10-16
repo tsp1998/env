@@ -4,13 +4,13 @@
 			"path": "../.."
 		},
 		{
-			"path": "../../../Next/royaltsp-next"
-		},
-		{
 			"path": "../../../scripts"
 		},
 		{
-			"path": "../../../Blazor/royaltsp-blazor"
+			"path": "../../../Extension"
+		},
+		{
+			"path": "../../../Solid/royaltsp-solid"
 		}
 	],
 	"settings": {}

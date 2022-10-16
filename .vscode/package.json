@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "style:build": "sass ./styles/custom.scss ./styles/custom.css",
-    "style:dev": "sass -w ./styles/custom.scss ./styles/custom.css"
+    "style:dev": "sass -w ./styles/custom.scss ./styles/custom.css",
+    "copy-snippets": "ts-node ./src/utils/copy-snippets.ts"
   },
   "keywords": [],
   "author": "",
