@@ -7,11 +7,16 @@
 			"path": "../../../scripts"
 		},
 		{
-			"path": "../../../Extension"
+			"path": "../../../Solid/royaltsp-solid"
 		},
 		{
-			"path": "../../../Solid/royaltsp-solid"
+			"path": "../../../Bun/royaltsp-bun"
+		},
+		{
+			"path": "../../../Rust/royaltsp-wasm"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "royaltsp-wasm"
+	}
 }
