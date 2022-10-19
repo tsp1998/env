@@ -4,10 +4,19 @@
 			"path": "../.."
 		},
 		{
-			"path": "../../../Next/royaltsp-next"
+			"path": "../../../scripts"
 		},
 		{
-			"path": "../../../scripts"
+			"path": "../../../Solid/royaltsp-solid"
+		},
+		{
+			"path": "../../../Explore"
+		},
+		{
+			"path": "../../../Rust/royaltsp-wasm"
+		},
+		{
+			"path": "../../../Rust/royaltsp-rust"
 		}
 	],
 	"settings": {}
