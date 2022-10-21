@@ -17,9 +17,17 @@
 		},
 		{
 			"path": "../../../Rust/royaltsp-rust"
+		},
+		{
+			"path": "../../../Bun/royaltsp-bun"
 		}
 	],
 	"settings": {
 		"liveServer.settings.multiRootWorkspaceName": "royaltsp-wasm"
+	},
+	"extensions": {
+		"recommendations": [
+			"rust-lang.rust-analyzer"
+		]
 	}
 }
