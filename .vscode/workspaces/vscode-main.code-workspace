@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "../../../Bun/royaltsp-bun"
+		},
+		{
+			"path": "../../../Deno/royaltsp-deno"
 		}
 	],
 	"settings": {
