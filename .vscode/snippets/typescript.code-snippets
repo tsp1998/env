@@ -1,3 +1,32 @@
 {
-	
+  "global-types": {
+    "prefix": [
+      "globalTypes",
+      "typesGlobal"
+    ],
+    "body": [
+      "declare global {",
+      "\tnamespace types {",
+      "\t\tnamespace ${1:NameSpaceName} {\n\t\t\t$2\n\t\t}",
+      "\t}",
+      "}",
+      "export {}"
+    ]
+  },
+  "custom-global-types": {
+    "prefix": [
+      "customGlobalTypes",
+      "typesCustomGlobal"
+    ],
+    "body": [
+      "declare global {",
+      "\tnamespace types {",
+      "\t\tnamespace ${1:NameSpaceName} {",
+      "\t\t\tnamespace custom {\n\t\t\t\t$2\n\t\t\t}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "export {}"
+    ]
+  }
 }

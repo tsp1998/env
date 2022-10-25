@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../performance"
+		},
+		{
+			"path": "../../../Solid/start-solid"
+		},
+		{
+			"path": "../../../TypeScript/start-ts"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "start-ts",
+		"liveServer.settings.port": 5501
+	}
+}

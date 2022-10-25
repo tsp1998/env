@@ -23,6 +23,15 @@
 		},
 		{
 			"path": "../../../Deno/royaltsp-deno"
+		},
+		{
+			"path": "../../../Deno/royaltsp-solid-deno"
+		},
+		{
+			"path": "../../../PHP/royaltsp-php"
+		},
+		{
+			"path": "../../../AssemblyScript/royaltsp-assemblyscript"
 		}
 	],
 	"settings": {
