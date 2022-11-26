@@ -95,7 +95,18 @@
 		"body": "logger.warn({ message: '$1' })"
 	},
 	"promise-delay": {
-		"prefix": ["stoprom", "promsto"],
+		"prefix": [
+			"stoprom",
+			"promsto"
+		],
 		"body": "await new Promise(resolve  => setTimeout(resolve, ${1:1000}))"
+	},
+	"cli-util": {
+		"prefix": "cliUtil",
+		"body": [
+			"const [_, __, ${3:argName}] = process.argv\n",
+			"const ${1:utilName} = () => {\n\t$2\n}\n",
+			"${1:utilName}(${3:argName})"
+		]
 	}
 }
