@@ -1,20 +1,51 @@
 {
 	"folders": [
 		{
-			"path": "../../../royaltsp"
+			"name": "royaltsp-types",
+			"path": "../../../royaltsp-types"
 		},
 		{
+			"name": "logs",
+			"path": "../../../logs"
+		},
+		{
+			"name": "env",
+			"path": "../.."
+		},
+		{
+			"name": "data",
 			"path": "../../../data"
 		},
 		{
+			"name": "data-private",
 			"path": "../../../data-private"
 		},
 		{
+			"name": "data-public",
 			"path": "../../../data-public"
 		},
 		{
-			"path": "../.."
+			"name": "automation",
+			"path": "../../../automation"
+		},
+		{
+			"name": "royaltsp",
+			"path": "../../../royaltsp"
+		},
+		{
+			"name": "static-data",
+			"path": "../../../static-data"
+		},
+		{
+			"path": "../../../libs"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "royaltsp",
+		"files.associations": {
+			"stdio.h": "c",
+			"string.h": "c",
+			"lang.types.h": "c"
+		}
+	}
 }

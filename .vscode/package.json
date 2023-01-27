@@ -5,10 +5,11 @@
   "scripts": {
     "style:build": "sass ./styles/custom.scss ./styles/custom.css",
     "style:dev": "sass -w ./styles/custom.scss ./styles/custom.css",
-    "copy-snippets": "ts-node ./src/utils/copy-snippets.ts"
+    "copy-snippets": "ts-node ./src/utils/copy-snippets.ts",
+    "copy-configs": "ts-node ./src/utils/copy-configs.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shubham Tandale",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.9",

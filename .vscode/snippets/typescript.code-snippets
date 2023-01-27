@@ -28,5 +28,76 @@
       "}",
       "export {}"
     ]
+  },
+  "paramsConstDestructure": {
+    "prefix": "pcdes",
+    "body": "const { data, optionalData } = params!"
+  },
+  "paramsLetDestructure": {
+    "prefix": "pldes",
+    "body": "let { data, optionalData } = params!"
+  },
+  "fnBareMinType": {
+    "prefix": "tlcf",
+    "body": "ts.lang.core.Fn"
+  },
+  "typesKeyValue": {
+    "prefix": "tlsk",
+    "body": "ts.lang.structs.KeyValue"
+  },
+  "fn": {
+    "prefix": "tsfn",
+    "body": [
+      "const ${1:fnName}: ts.lang.core.Fn<{}> = () => {",
+      "\treturn { success: true }$2",
+      "}"
+    ]
+  },
+  "fn-types": {
+    "prefix": "tsfntypes",
+    "body": [
+      "dataParamsType: ${1:any},",
+      "dataReturnType: ${2:any},",
+      "async: ${3:true},"
+    ]
+  },
+  "fn-additional-types": {
+    "prefix": "tsfntypesadditional",
+    "body": [
+      "optionalDataParamsType: any,",
+      "optionalDataReturnType: any,",
+      "isDataReturnTypeObject: true,",
+      "plainReturnType: false"
+    ]
+  },
+  "fn-with-types": {
+    "prefix": "tsfnwithtypes",
+    "body": [
+      "const ${1:fnName}: ts.lang.core.Fn<{",
+      "\tdataParamsType: ${2:any},",
+      "\tdataReturnType: ${3:any},",
+      "\tasync: ${4:true},",
+      "}> = ${5:async} (params) => {",
+      "\treturn { success: true }$6",
+      "}"
+    ]
+  },
+  "fn-async": {
+    "prefix": "tsfnasync",
+    "body": [
+      "const ${1:fnName}: ts.lang.core.Fn<{",
+      "\tasync: true,",
+      "}> = async (params) => {",
+      "\treturn { success: true }$2",
+      "}"
+    ]
+  },
+  "returnSuccessTrue": {
+    "prefix": "rst",
+    "body": "return { success: true }"
+  },
+  "returnSuccessFalse": {
+    "prefix": "rsf",
+    "body": "return { success: false }"
   }
 }

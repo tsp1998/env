@@ -1,0 +1,13 @@
+{
+  "package-json": {
+    "prefix": "packagejsontemplate",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:royaltsp-name}\",",
+      "\t\"version\": \"0.0.0\",",
+      "\t\"private\": true,",
+      "\t\"type\": \"module\"",
+      "}"
+    ]
+  }
+}

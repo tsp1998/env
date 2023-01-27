@@ -1,0 +1,19 @@
+{
+  "editor.fontFamily": "Operator Mono",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "editor.fontSize": 20,
+  "editor.mouseWheelZoom": true,
+  "terminal.integrated.fontFamily": "Operator Mono",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": "500",
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 2,
+  "explorer.confirmDelete": false,
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "SynthWave '84"
+}

@@ -19,6 +19,41 @@
 		"prefix": "clwo",
 		"body": "console.warn(`${1:object}`, ${1:object})"
 	},
+	"consoleTimeBoth": {
+		"prefix": "clt",
+		"body": [
+			"console.time(`${1:name}`)\n$2",
+			"console.timeEnd(`${1:name}`)"
+		]
+	},
+	"consoleTimeStart": {
+		"prefix": "clts",
+		"body": "console.time(`${1:name}`)\n$2"
+	},
+	"consoleTimeEnd": {
+		"prefix": "clte",
+		"body": "console.timeEnd(`${1:name}`)\n$2"
+	},
+	"createElement": {
+		"prefix": "dc",
+		"body": "document.createElement('$1')"
+	},
+	"querySelector": {
+		"prefix": "dqs",
+		"body": "document.querySelector(`$1`)"
+	},
+	"querySelectorAll": {
+		"prefix": "dqsa",
+		"body": "document.querySelectorAll(`$1`)"
+	},
+	"bodyQuerySelector": {
+		"prefix": "dbqs",
+		"body": "document.body.querySelector(`$1`)"
+	},
+	"bodyQuerySelectorAll": {
+		"prefix": "dbqsa",
+		"body": "document.body.querySelectorAll(`$1`)"
+	},
 	"jsFunction": {
 		"prefix": "fun",
 		"body": [
