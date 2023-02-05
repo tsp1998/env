@@ -6,7 +6,7 @@
     ],
     "body": [
       "declare global {",
-      "\tnamespace types {",
+      "\tnamespace ts {",
       "\t\tnamespace ${1:NameSpaceName} {\n\t\t\t$2\n\t\t}",
       "\t}",
       "}",
@@ -20,7 +20,7 @@
     ],
     "body": [
       "declare global {",
-      "\tnamespace types {",
+      "\tnamespace ts {",
       "\t\tnamespace ${1:NameSpaceName} {",
       "\t\t\tnamespace custom {\n\t\t\t\t$2\n\t\t\t}",
       "\t\t}",
