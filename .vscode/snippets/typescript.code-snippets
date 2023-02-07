@@ -31,11 +31,11 @@
   },
   "paramsConstDestructure": {
     "prefix": "pcdes",
-    "body": "const { data, optionalData } = params!"
+    "body": "const { data, dataOptional } = params!"
   },
   "paramsLetDestructure": {
     "prefix": "pldes",
-    "body": "let { data, optionalData } = params!"
+    "body": "let { data, dataOptional } = params!"
   },
   "fnBareMinType": {
     "prefix": "tlcf",
