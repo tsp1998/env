@@ -23,7 +23,15 @@ configFiles.forEach(configFile => {
   const srcFilePath = path.join(localConfigFolderPath, configFile)
   const destFilePath = path.join(configFolderPath, configFile)
   if (fs.existsSync(destFilePath)) {
-    fs.rmSync(destFilePath)
+    if ((process.argv[2] || '').includes('rev')) {
+      fs.rmSync(srcFilePath)
+    } else {
+      fs.rmSync(destFilePath)
+    }
   }
-  fs.copyFileSync(srcFilePath, destFilePath)
+  if ((process.argv[2] || '').includes('rev')) {
+    fs.copyFileSync(destFilePath, srcFilePath)
+  } else {
+    fs.copyFileSync(srcFilePath, destFilePath)
+  }
 })

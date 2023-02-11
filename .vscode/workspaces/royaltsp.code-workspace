@@ -24,5 +24,8 @@
     {
       "path": "../../../scripts"
     }
-  ]
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "royaltsp"
+  }
 }

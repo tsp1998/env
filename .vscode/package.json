@@ -6,7 +6,8 @@
     "style:build": "sass ./styles/custom.scss ./styles/custom.css",
     "style:dev": "sass -w ./styles/custom.scss ./styles/custom.css",
     "copy-snippets": "ts-node ./src/utils/copy-snippets.ts",
-    "copy-configs": "ts-node ./src/utils/copy-configs.ts"
+    "copy-configs": "ts-node ./src/utils/copy-configs.ts",
+    "backup-configs": "ts-node ./src/utils/copy-configs.ts rev"
   },
   "keywords": [],
   "author": "Shubham Tandale",

@@ -23,7 +23,15 @@ snippetFiles.forEach(snippetFile => {
   const srcFilePath = path.join(localSnippetFolderPath, snippetFile)
   const destFilePath = path.join(snippetFolderPath, snippetFile)
   if (fs.existsSync(destFilePath)) {
-    fs.rmSync(destFilePath)
+    if ((process.argv[2] || '').includes('rev')) {
+      fs.rmSync(srcFilePath)
+    } else {
+      fs.rmSync(destFilePath)
+    }
   }
-  fs.copyFileSync(srcFilePath, destFilePath)
+  if ((process.argv[2] || '').includes('rev')) {
+    fs.copyFileSync(destFilePath, srcFilePath)
+  } else {
+    fs.copyFileSync(srcFilePath, destFilePath)
+  }
 })

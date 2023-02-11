@@ -15,5 +15,12 @@
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "SynthWave '84"
+  "workbench.colorTheme": "SynthWave '84",
+  "powermode.enabled": true,
+  "powermode.presets": "flames",
+  "powermode.combo.counterSize": 1,
+  "powermode.combo.timeout": 1,
+  "powermode.shake.intensity": 0,
+  "liveServer.settings.NoBrowser": true,
+  "liveServer.settings.port": 3000
 }
