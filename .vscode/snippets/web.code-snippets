@@ -1,0 +1,6 @@
+{
+  "HTMLCoreAttributesString": {
+    "prefix": ["htmlcas", "hcas"],
+    "body": "$1.$2#$3*$4=$5"
+  }
+}
