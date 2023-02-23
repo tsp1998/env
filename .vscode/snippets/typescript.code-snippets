@@ -1,4 +1,213 @@
 {
+  "consoleLog": {
+		"prefix": [
+			"clg"
+		],
+		"body": "console.log(${1:object})"
+	},
+	"consoleLogObject": {
+		"prefix": "clo",
+		"body": "console.log(`${1:object}`, ${1:object})"
+	},
+	"consoleWarn": {
+		"prefix": [
+			"clw"
+		],
+		"body": "console.warn(${1:object})"
+	},
+	"consoleWarnObject": {
+		"prefix": "clwo",
+		"body": "console.warn(`${1:object}`, ${1:object})"
+	},
+	"consoleTimeBoth": {
+		"prefix": "clt",
+		"body": [
+			"console.time(`${1:name}`)\n$2",
+			"console.timeEnd(`${1:name}`)"
+		]
+	},
+	"consoleTimeStart": {
+		"prefix": "clts",
+		"body": "console.time(`${1:name}`)\n$2"
+	},
+	"consoleTimeEnd": {
+		"prefix": "clte",
+		"body": "console.timeEnd(`${1:name}`)\n$2"
+	},
+	"createElement": {
+		"prefix": "dc",
+		"body": "document.createElement('$1')"
+	},
+	"querySelector": {
+		"prefix": "dqs",
+		"body": "document.querySelector(`$1`)"
+	},
+	"querySelectorAll": {
+		"prefix": "dqsa",
+		"body": "document.querySelectorAll(`$1`)"
+	},
+	"bodyQuerySelector": {
+		"prefix": "dbqs",
+		"body": "document.body.querySelector(`$1`)"
+	},
+	"bodyQuerySelectorAll": {
+		"prefix": "dbqsa",
+		"body": "document.body.querySelectorAll(`$1`)"
+	},
+	"jsFunction": {
+		"prefix": "fun",
+		"body": [
+			"function $1(params) {",
+			"\t$2",
+			"}"
+		]
+	},
+	"const destructure": {
+		"prefix": "condes",
+		"body": [
+			"const { $2 } = $1;"
+		]
+	},
+	"let destructure": {
+		"prefix": "letdes",
+		"body": [
+			"let { $2 } = $1;"
+		]
+	},
+	"jsGetById": {
+		"prefix": "dgi",
+		"body": "document.getElementById('$1')"
+	},
+	"promise": {
+		"prefix": [
+			"promise",
+			"newPromise"
+		],
+		"body": [
+			"new Promise((resolve, reject) => {",
+			"\t$1",
+			"})"
+		]
+	},
+	"sti": {
+		"prefix": "sti",
+		"body": "setInterval(() => {$3}, ${1:intervalTime})"
+	},
+	"sto": {
+		"prefix": "sto",
+		"body": "setTimeout(() => {$2}, ${1:delayTime})"
+	},
+	"loginfo": {
+		"prefix": "loginfo",
+		"body": "logger.info(`${1:message}`)"
+	},
+	"logdebug": {
+		"prefix": "logdebug",
+		"body": "logger.debug(`${1:message}`)"
+	},
+	"logerror": {
+		"prefix": "logerror",
+		"body": "logger.error(`${1:message}`)"
+	},
+	"logwarn": {
+		"prefix": "logwarn",
+		"body": "logger.warn(`${1:message}`)"
+	},
+	"loginfoobj": {
+		"prefix": "loginfoobj",
+		"body": "logger.info({ message: '$1' })"
+	},
+	"logdebugobj": {
+		"prefix": "logdebugobj",
+		"body": "logger.debug({ message: '$1' })"
+	},
+	"logerrorobj": {
+		"prefix": "logerrorobj",
+		"body": "logger.error({ message: '$1' })"
+	},
+	"logwarnobj": {
+		"prefix": "logwarnobj",
+		"body": "logger.warn({ message: '$1' })"
+	},
+	"promise-delay": {
+		"prefix": [
+			"stoprom",
+			"promsto"
+		],
+		"body": "await new Promise(resolve  => setTimeout(resolve, ${1:1000}))"
+	},
+	"cli-util": {
+		"prefix": "cliUtil",
+		"body": [
+			"const [_, __, ${3:argName}] = process.argv\n",
+			"const ${1:utilName} = () => {\n\t$2\n}\n",
+			"${1:utilName}(${3:argName})"
+		]
+	},
+  "import": {
+		"prefix": "im",
+		"body": "import '${1:module}'"
+	},
+  "importFunction": {
+		"prefix": "imf",
+		"body": "import('${1:module}')"
+	},
+	"import module": {
+		"prefix": "imp",
+		"body": "import ${2:moduleName} from '${1:module}'"
+	},
+	"import named modules": {
+		"prefix": "imd",
+		"body": "import { $2 } from '${1:module}'"
+	},
+	"import module as": {
+		"prefix": "impas",
+		"body": "import * as ${2:moduleName} from '${1:module}'"
+	},
+	"import named modules as": {
+		"prefix": "imdas",
+		"body": "import { $2 as $3 } from '${1:module}'"
+	},
+	"export": {
+		"prefix": "ex",
+		"body": "export "
+	},
+	"export default module": {
+		"prefix": "exp",
+		"body": "export default "
+	},
+	"export default module from": {
+		"prefix": "expfrom",
+		"body": "export { default as ${2:moduleName} } from '${1:module}'"
+	},
+	"export const": {
+		"prefix": "expc",
+		"body": "export const "
+	},
+	"export type": {
+		"prefix": "expt",
+		"body": "export type "
+	},
+	"export interface": {
+		"prefix": "expi",
+		"body": "export interface "
+	},
+	"import react": {
+		"prefix": "imr",
+		"body": "import React from 'react'"
+	},
+	"method": {
+		"prefix": "met",
+		"body": "${1:methodName} = (${2:params}) => {$3}"
+	},
+	"destructure object": {
+		"prefix": "dob",
+		"body": "const { ${2:propName} } = ${1:objectToDescruct}"
+	},
+	"destructure array": {
+		"prefix": "dar",
+		"body": "const [${2:propName}] = ${1:arrayToDescruct}"
+	},
   "global-types": {
     "prefix": [
       "globalTypes",
@@ -99,5 +308,32 @@
   "returnSuccessFalse": {
     "prefix": "rsf",
     "body": "return { success: false }"
+  },
+  "describe": {
+    "prefix": "desc",
+    "body": [
+      "describe('$1', () => {",
+      "\t$2",
+      "})"
+    ]
+  },
+  "test": {
+    "prefix": [
+      "test",
+      "tc"
+    ],
+    "body": [
+      "test('should $1', () => {",
+      "\t$2",
+      "})"
+    ]
+  },
+  "it function": {
+    "prefix": "tit",
+    "body": [
+      "it('should $1', () => {",
+      "\t$2",
+      "})"
+    ]
   }
 }
