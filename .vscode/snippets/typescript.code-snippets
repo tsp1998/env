@@ -335,5 +335,9 @@
       "\t$2",
       "})"
     ]
-  }
+  },
+	"throw error": {
+		"prefix": "th",
+		"body": "throw {$1} as $Error"
+	}
 }
