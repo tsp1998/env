@@ -338,6 +338,14 @@
   },
 	"throw error": {
 		"prefix": "th",
-		"body": "throw {$1} as $Error"
+		"body": "throw {$1} as \\$Error"
+	},
+	"error message": {
+		"prefix": "errmsg",
+		"body": "(error as \\$Error).message"
+	},
+	"error as": {
+		"prefix": "erras",
+		"body": "error as \\$Error"
 	}
 }

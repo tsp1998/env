@@ -1,34 +1,69 @@
 {
-  "folders": [
-    {
-      "path": "../../../royaltsp"
-    },
-    {
-      "path": "../.."
-    },
-    {
-      "path": "../../../libs"
-    },
-    {
-      "path": "../../../../logs"
-    },
-    {
-      "path": "../../../data"
-    },
-    {
-      "path": "../../../data-private"
-    },
-    {
-      "path": "../../../data-public"
-    },
-    {
-      "path": "../../../scripts"
-    },
-    {
-      "path": "../../../automation"
-    }
-  ],
-  "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "royaltsp"
-  }
+	"folders": [
+		{
+			"name": "royaltsp-addons",
+			"path": "../../../royaltsp/royaltsp-addons"
+		},
+		{
+			"name": "royaltsp-client",
+			"path": "../../../royaltsp/royaltsp-client"
+		},
+		{
+			"name": "royaltsp-frontend",
+			"path": "../../../royaltsp/royaltsp-frontend"
+		},
+		{
+			"name": "royaltsp-lib",
+			"path": "../../../royaltsp/royaltsp-lib"
+		},
+		{
+			"name": "royaltsp-mobile",
+			"path": "../../../royaltsp/royaltsp-mobile"
+		},
+		{
+			"name": "royaltsp-server",
+			"path": "../../../royaltsp/royaltsp-server"
+		},
+		{
+			"name": "royaltsp-types",
+			"path": "../../../royaltsp/royaltsp-types"
+		},
+		{
+			"name": "royaltsp-php",
+			"path": "../../../royaltsp/royaltsp-php"
+		},
+		{
+			"name": "env",
+			"path": "../.."
+		},
+		{
+			"name": "data",
+			"path": "../../../data"
+		},
+		{
+			"name": "data-private",
+			"path": "../../../data-private"
+		},
+		{
+			"name": "data-public",
+			"path": "../../../data-public"
+		},
+		{
+			"name": "scripts",
+			"path": "../../../scripts"
+		},
+		{
+			"name": "logs",
+			"path": "../../../logs"
+		},
+		{
+			"name": "static-data",
+			"path": "../../../static-data"
+		},
+		{
+			"name": "libs",
+			"path": "../../../libs"
+		}
+	],
+	"settings": {}
 }
