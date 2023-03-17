@@ -63,6 +63,9 @@
 		{
 			"name": "libs",
 			"path": "../../../libs"
+		},
+		{
+			"path": "../../../automation"
 		}
 	],
 	"settings": {}
