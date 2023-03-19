@@ -338,14 +338,21 @@
   },
 	"throw error": {
 		"prefix": "th",
-		"body": "throw {$1} as \\$Error"
+		"body": "throw { default: {$1} } as \\$Error"
 	},
 	"error message": {
 		"prefix": "errmsg",
-		"body": "(error as \\$Error).message"
+		"body": "(error as \\$Error['default']).message"
 	},
 	"error as": {
 		"prefix": "erras",
-		"body": "error as \\$Error"
+		"body": "error as \\$Error['default']"
+	},
+	"main function": {
+		"prefix": "mainfn",
+		"body": [
+			"const main = async () => {\n\t$1\n}\n",
+			"main()"
+		]
 	}
 }
