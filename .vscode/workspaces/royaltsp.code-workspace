@@ -43,13 +43,9 @@
 		{
 			"name": "env",
 			"path": "../.."
-		},
-		{
-			"name": "sandbox",
-			"path": "../../../sandbox"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "sandbox"
+		"liveServer.settings.multiRootWorkspaceName": "royaltsp-ts"
 	}
 }

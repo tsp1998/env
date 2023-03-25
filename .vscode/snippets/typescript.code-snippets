@@ -1,5 +1,5 @@
 {
-  "consoleLog": {
+	"consoleLog": {
 		"prefix": [
 			"clg"
 		],
@@ -144,11 +144,11 @@
 			"${1:utilName}(${3:argName})"
 		]
 	},
-  "import": {
+	"import": {
 		"prefix": "im",
 		"body": "import '${1:module}'"
 	},
-  "importFunction": {
+	"importFunction": {
 		"prefix": "imf",
 		"body": "import('${1:module}')"
 	},
@@ -208,134 +208,134 @@
 		"prefix": "dar",
 		"body": "const [${2:propName}] = ${1:arrayToDescruct}"
 	},
-  "global-types": {
-    "prefix": [
-      "globalTypes",
-      "typesGlobal"
-    ],
-    "body": [
-      "declare global {",
-      "\tnamespace ts {",
-      "\t\tnamespace ${1:NameSpaceName} {\n\t\t\t$2\n\t\t}",
-      "\t}",
-      "}",
-      "export {}"
-    ]
-  },
-  "custom-global-types": {
-    "prefix": [
-      "customGlobalTypes",
-      "typesCustomGlobal"
-    ],
-    "body": [
-      "declare global {",
-      "\tnamespace ts {",
-      "\t\tnamespace ${1:NameSpaceName} {",
-      "\t\t\tnamespace custom {\n\t\t\t\t$2\n\t\t\t}",
-      "\t\t}",
-      "\t}",
-      "}",
-      "export {}"
-    ]
-  },
-  "paramsConstDestructure": {
-    "prefix": "pcdes",
-    "body": "const { data, dataOptional } = params!"
-  },
-  "paramsLetDestructure": {
-    "prefix": "pldes",
-    "body": "let { data, dataOptional } = params!"
-  },
-  "fnBareMinType": {
-    "prefix": "tlcf",
-    "body": "ts.lang.core.Fn"
-  },
-  "typesKeyValue": {
-    "prefix": "tlsk",
-    "body": "ts.lang.structs.KeyValue"
-  },
-  "fn": {
-    "prefix": "tsfn",
-    "body": [
-      "const ${1:fnName}: ts.lang.core.Fn<{}> = () => {",
-      "\treturn { success: true }$2",
-      "}"
-    ]
-  },
-  "fn-types": {
-    "prefix": "tsfntypes",
-    "body": [
-      "dataParamsType: ${1:any},",
-      "dataReturnType: ${2:any},",
-      "async: ${3:true},"
-    ]
-  },
-  "fn-additional-types": {
-    "prefix": "tsfntypesadditional",
-    "body": [
-      "optionalDataParamsType: any,",
-      "optionalDataReturnType: any,",
-      "isDataReturnTypeObject: true,",
-      "plainReturnType: false"
-    ]
-  },
-  "fn-with-types": {
-    "prefix": "tsfnwithtypes",
-    "body": [
-      "const ${1:fnName}: ts.lang.core.Fn<{",
-      "\tdataParamsType: ${2:any},",
-      "\tdataReturnType: ${3:any},",
-      "\tasync: ${4:true},",
-      "}> = ${5:async} (params) => {",
-      "\treturn { success: true }$6",
-      "}"
-    ]
-  },
-  "fn-async": {
-    "prefix": "tsfnasync",
-    "body": [
-      "const ${1:fnName}: ts.lang.core.Fn<{",
-      "\tasync: true,",
-      "}> = async (params) => {",
-      "\treturn { success: true }$2",
-      "}"
-    ]
-  },
-  "returnSuccessTrue": {
-    "prefix": "rst",
-    "body": "return { success: true }"
-  },
-  "returnSuccessFalse": {
-    "prefix": "rsf",
-    "body": "return { success: false }"
-  },
-  "describe": {
-    "prefix": "desc",
-    "body": [
-      "describe('$1', () => {",
-      "\t$2",
-      "})"
-    ]
-  },
-  "test": {
-    "prefix": [
-      "test",
-      "tc"
-    ],
-    "body": [
-      "test('should $1', () => {",
-      "\t$2",
-      "})"
-    ]
-  },
-  "it function": {
-    "prefix": "tit",
-    "body": [
-      "it('should $1', () => {",
-      "\t$2",
-      "})"
-    ]
-  },
+	"global-types": {
+		"prefix": [
+			"globalTypes",
+			"typesGlobal"
+		],
+		"body": [
+			"declare global {",
+			"\tnamespace ts {",
+			"\t\tnamespace ${1:NameSpaceName} {\n\t\t\t$2\n\t\t}",
+			"\t}",
+			"}",
+			"export {}"
+		]
+	},
+	"custom-global-types": {
+		"prefix": [
+			"customGlobalTypes",
+			"typesCustomGlobal"
+		],
+		"body": [
+			"declare global {",
+			"\tnamespace ts {",
+			"\t\tnamespace ${1:NameSpaceName} {",
+			"\t\t\tnamespace custom {\n\t\t\t\t$2\n\t\t\t}",
+			"\t\t}",
+			"\t}",
+			"}",
+			"export {}"
+		]
+	},
+	"paramsConstDestructure": {
+		"prefix": "pcdes",
+		"body": "const { data, dataOptional } = params!"
+	},
+	"paramsLetDestructure": {
+		"prefix": "pldes",
+		"body": "let { data, dataOptional } = params!"
+	},
+	"fnBareMinType": {
+		"prefix": "tlcf",
+		"body": "ts.lang.core.Fn"
+	},
+	"typesKeyValue": {
+		"prefix": "tlsk",
+		"body": "ts.lang.structs.KeyValue"
+	},
+	"fn": {
+		"prefix": "tsfn",
+		"body": [
+			"const ${1:fnName}: ts.lang.core.Fn<{}> = () => {",
+			"\treturn { success: true }$2",
+			"}"
+		]
+	},
+	"fn-types": {
+		"prefix": "tsfntypes",
+		"body": [
+			"dataParamsType: ${1:any},",
+			"dataReturnType: ${2:any},",
+			"async: ${3:true},"
+		]
+	},
+	"fn-additional-types": {
+		"prefix": "tsfntypesadditional",
+		"body": [
+			"optionalDataParamsType: any,",
+			"optionalDataReturnType: any,",
+			"isDataReturnTypeObject: true,",
+			"plainReturnType: false"
+		]
+	},
+	"fn-with-types": {
+		"prefix": "tsfnwithtypes",
+		"body": [
+			"const ${1:fnName}: ts.lang.core.Fn<{",
+			"\tdataParamsType: ${2:any},",
+			"\tdataReturnType: ${3:any},",
+			"\tasync: ${4:true},",
+			"}> = ${5:async} (params) => {",
+			"\treturn { success: true }$6",
+			"}"
+		]
+	},
+	"fn-async": {
+		"prefix": "tsfnasync",
+		"body": [
+			"const ${1:fnName}: ts.lang.core.Fn<{",
+			"\tasync: true,",
+			"}> = async (params) => {",
+			"\treturn { success: true }$2",
+			"}"
+		]
+	},
+	"returnSuccessTrue": {
+		"prefix": "rst",
+		"body": "return { success: true }"
+	},
+	"returnSuccessFalse": {
+		"prefix": "rsf",
+		"body": "return { success: false }"
+	},
+	"describe": {
+		"prefix": "desc",
+		"body": [
+			"describe('$1', () => {",
+			"\t$2",
+			"})"
+		]
+	},
+	"test": {
+		"prefix": [
+			"test",
+			"tc"
+		],
+		"body": [
+			"test('should $1', () => {",
+			"\t$2",
+			"})"
+		]
+	},
+	"it function": {
+		"prefix": "tit",
+		"body": [
+			"it('should $1', () => {",
+			"\t$2",
+			"})"
+		]
+	},
 	"throw error": {
 		"prefix": "th",
 		"body": "throw { default: {$1} } as \\$Error"
@@ -348,11 +348,31 @@
 		"prefix": "erras",
 		"body": "error as \\$Error['default']"
 	},
+	"error default": {
+		"prefix": "errdef",
+		"body": "\\$Error['default']"
+	},
+	"error assign": {
+		"prefix": "errassign",
+		"body": [
+			"const _error = error as \\$Error['default']",
+			"returnData.error![_error?.code || 'default'] = _error!"
+		]
+	},
 	"main function": {
 		"prefix": "mainfn",
 		"body": [
 			"const main = async () => {\n\t$1\n}\n",
 			"main()"
+		]
+	},
+	"is array": {
+		"prefix": "isArr",
+		"body": [
+			"const isArray = Array.isArray(${1:varName})",
+			"if (!isArray) {",
+			"\t${1:varName} = [${1:varName}] as ${2:any}[]",
+			"}"
 		]
 	}
 }
