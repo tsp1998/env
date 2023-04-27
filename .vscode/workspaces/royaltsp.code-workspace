@@ -13,6 +13,10 @@
 			"path": "../../../royaltsp/royaltsp-php"
 		},
 		{
+			"name": "royaltsp-html",
+			"path": "../../../royaltsp/royaltsp-html"
+		},
+		{
 			"name": "data",
 			"path": "../../../data"
 		},
@@ -43,9 +47,13 @@
 		{
 			"name": "env",
 			"path": "../.."
+		},
+		{
+			"path": "../../../royaltsp/royaltsp-c"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "royaltsp-ts"
+		"liveServer.settings.multiRootWorkspaceName": "royaltsp-ts",
+		"liveServer.settings.port": 3001
 	}
 }

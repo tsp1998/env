@@ -267,7 +267,7 @@
 		"body": [
 			"dataParamsType: ${1:any},",
 			"dataReturnType: ${2:any},",
-			"async: ${3:true},"
+			"$async: ${3:true},"
 		]
 	},
 	"fn-additional-types": {
@@ -285,7 +285,7 @@
 			"const ${1:fnName}: ts.lang.core.Fn<{",
 			"\tdataParamsType: ${2:any},",
 			"\tdataReturnType: ${3:any},",
-			"\tasync: ${4:true},",
+			"\t$async: ${4:true},",
 			"}> = ${5:async} (params) => {",
 			"\treturn { success: true }$6",
 			"}"
@@ -295,7 +295,7 @@
 		"prefix": "tsfnasync",
 		"body": [
 			"const ${1:fnName}: ts.lang.core.Fn<{",
-			"\tasync: true,",
+			"\t$async: true,",
 			"}> = async (params) => {",
 			"\treturn { success: true }$2",
 			"}"
@@ -342,21 +342,21 @@
 	},
 	"error message": {
 		"prefix": "errmsg",
-		"body": "(error as \\$Error['default']).message"
+		"body": "(error as \\$Error['$'])!.message"
 	},
 	"error as": {
 		"prefix": "erras",
-		"body": "error as \\$Error['default']"
+		"body": "error as \\$Error['$']"
 	},
 	"error default": {
 		"prefix": "errdef",
-		"body": "\\$Error['default']"
+		"body": "\\$Error['$']"
 	},
 	"error assign": {
 		"prefix": "errassign",
 		"body": [
-			"const _error = error as \\$Error['default']",
-			"returnData.error![_error?.code || 'default'] = _error!"
+			"const _error = error as \\$Error['$']",
+			"$dataReturn.\\e![_error?.code || 'default'] = _error!"
 		]
 	},
 	"main function": {
@@ -373,6 +373,20 @@
 			"if (!isArray) {",
 			"\t${1:varName} = [${1:varName}] as ${2:any}[]",
 			"}"
+		]
+	},
+	"tsptest import": {
+		"prefix": "imptsptest",
+		"body": [
+			"import * as tsptest from '../$1tests/tsptest'",
+		]
+	},
+	"tsptest": {
+		"prefix": "tsptest",
+		"body": [
+			"import * as tsptest from '../$1tests/tsptest'\n",
+			"tsptest.tests.${2:testName} = () => {\n\t$3\n}\n",
+			"tsptest.runTests()",
 		]
 	}
 }
