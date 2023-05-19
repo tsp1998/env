@@ -9,16 +9,6 @@
 		"prefix": "clo",
 		"body": "console.log(`${1:object}`, ${1:object})"
 	},
-	"consoleWarn": {
-		"prefix": [
-			"clw"
-		],
-		"body": "console.warn(${1:object})"
-	},
-	"consoleWarnObject": {
-		"prefix": "clwo",
-		"body": "console.warn(`${1:object}`, ${1:object})"
-	},
 	"consoleTimeBoth": {
 		"prefix": "clt",
 		"body": [
@@ -26,33 +16,9 @@
 			"console.timeEnd(`${1:name}`)"
 		]
 	},
-	"consoleTimeStart": {
-		"prefix": "clts",
-		"body": "console.time(`${1:name}`)\n$2"
-	},
-	"consoleTimeEnd": {
-		"prefix": "clte",
-		"body": "console.timeEnd(`${1:name}`)\n$2"
-	},
-	"createElement": {
-		"prefix": "dc",
-		"body": "document.createElement('$1')"
-	},
-	"querySelector": {
-		"prefix": "dqs",
-		"body": "document.querySelector(`$1`)"
-	},
-	"querySelectorAll": {
-		"prefix": "dqsa",
-		"body": "document.querySelectorAll(`$1`)"
-	},
-	"bodyQuerySelector": {
-		"prefix": "dbqs",
-		"body": "document.body.querySelector(`$1`)"
-	},
-	"bodyQuerySelectorAll": {
-		"prefix": "dbqsa",
-		"body": "document.body.querySelectorAll(`$1`)"
+	"createElements": {
+		"prefix": "ce",
+		"body": "$createElements($1, $2)"
 	},
 	"jsFunction": {
 		"prefix": "fun",
@@ -62,32 +28,9 @@
 			"}"
 		]
 	},
-	"const destructure": {
-		"prefix": "condes",
-		"body": [
-			"const { $2 } = $1;"
-		]
-	},
-	"let destructure": {
-		"prefix": "letdes",
-		"body": [
-			"let { $2 } = $1;"
-		]
-	},
-	"jsGetById": {
-		"prefix": "dgi",
-		"body": "document.getElementById('$1')"
-	},
 	"promise": {
-		"prefix": [
-			"promise",
-			"newPromise"
-		],
-		"body": [
-			"new Promise((resolve, reject) => {",
-			"\t$1",
-			"})"
-		]
+		"prefix": ["promise", "newPromise"],
+		"body": "new Promise((resolve, reject) => {$1})"
 	},
 	"sti": {
 		"prefix": "sti",
@@ -97,52 +40,12 @@
 		"prefix": "sto",
 		"body": "setTimeout(() => {$2}, ${1:delayTime})"
 	},
-	"loginfo": {
-		"prefix": "loginfo",
-		"body": "logger.info(`${1:message}`)"
-	},
-	"logdebug": {
-		"prefix": "logdebug",
-		"body": "logger.debug(`${1:message}`)"
-	},
-	"logerror": {
-		"prefix": "logerror",
-		"body": "logger.error(`${1:message}`)"
-	},
-	"logwarn": {
-		"prefix": "logwarn",
-		"body": "logger.warn(`${1:message}`)"
-	},
-	"loginfoobj": {
-		"prefix": "loginfoobj",
-		"body": "logger.info({ message: '$1' })"
-	},
-	"logdebugobj": {
-		"prefix": "logdebugobj",
-		"body": "logger.debug({ message: '$1' })"
-	},
-	"logerrorobj": {
-		"prefix": "logerrorobj",
-		"body": "logger.error({ message: '$1' })"
-	},
-	"logwarnobj": {
-		"prefix": "logwarnobj",
-		"body": "logger.warn({ message: '$1' })"
-	},
 	"promise-delay": {
 		"prefix": [
 			"stoprom",
 			"promsto"
 		],
 		"body": "await new Promise(resolve  => setTimeout(resolve, ${1:1000}))"
-	},
-	"cli-util": {
-		"prefix": "cliUtil",
-		"body": [
-			"const [_, __, ${3:argName}] = process.argv\n",
-			"const ${1:utilName} = () => {\n\t$2\n}\n",
-			"${1:utilName}(${3:argName})"
-		]
 	},
 	"import": {
 		"prefix": "im",
@@ -173,32 +76,16 @@
 		"body": "export "
 	},
 	"export default module": {
-		"prefix": "exp",
+		"prefix": "exd",
 		"body": "export default "
 	},
 	"export default module from": {
-		"prefix": "expfrom",
+		"prefix": "exdfrom",
 		"body": "export { default as ${2:moduleName} } from '${1:module}'"
 	},
 	"export const": {
-		"prefix": "expc",
+		"prefix": "exc",
 		"body": "export const "
-	},
-	"export type": {
-		"prefix": "expt",
-		"body": "export type "
-	},
-	"export interface": {
-		"prefix": "expi",
-		"body": "export interface "
-	},
-	"import react": {
-		"prefix": "imr",
-		"body": "import React from 'react'"
-	},
-	"method": {
-		"prefix": "met",
-		"body": "${1:methodName} = (${2:params}) => {$3}"
 	},
 	"destructure object": {
 		"prefix": "dob",
@@ -215,148 +102,30 @@
 		],
 		"body": [
 			"declare global {",
-			"\tnamespace ts {",
-			"\t\tnamespace ${1:NameSpaceName} {\n\t\t\t$2\n\t\t}",
-			"\t}",
+			"\tnamespace \\$${1:NameSpaceName} {\n\t\t$2\n\t}",
 			"}",
 			"export {}"
 		]
 	},
-	"custom-global-types": {
-		"prefix": [
-			"customGlobalTypes",
-			"typesCustomGlobal"
-		],
+	"fn": {
+		"prefix": "fn",
 		"body": [
-			"declare global {",
-			"\tnamespace ts {",
-			"\t\tnamespace ${1:NameSpaceName} {",
-			"\t\t\tnamespace custom {\n\t\t\t\t$2\n\t\t\t}",
+			"const ${1:fnName} = (${2:${3:paramName}S: \\$fn.FnP<${4:ParamType}>}) => {",
+			"\t/* please pass param as [param] if it's object */",
+			"\tconst isArray = Array.isArray(${3:paramName}S)",
+			"\ttype O = \\$fn.FnPO<${4:ParamType}>",
+			"\tif (!isArray && typeof ${3:paramName}S !== 'object') {",
+			"\t\t${3:paramName}S = [${3:paramName}S]",
+			"\t}",
+			"\tconst keys = Object.keys(${3:paramName}S)",
+			"\t/* initial setup done */\n",
+			"\tif (isArray) {",
+			"\t\tfor (let i = 0; i < keys.length; i++) {",
+			"\t\t\tconst value = (${3:paramName}S as O)[keys[i]]",
+			"\t\t\t${5:/* code */}",
 			"\t\t}",
 			"\t}",
 			"}",
-			"export {}"
-		]
-	},
-	"paramsConstDestructure": {
-		"prefix": "pcdes",
-		"body": "const { data, dataOptional } = params!"
-	},
-	"paramsLetDestructure": {
-		"prefix": "pldes",
-		"body": "let { data, dataOptional } = params!"
-	},
-	"fnBareMinType": {
-		"prefix": "tlcf",
-		"body": "ts.lang.core.Fn"
-	},
-	"typesKeyValue": {
-		"prefix": "tlsk",
-		"body": "ts.lang.structs.KeyValue"
-	},
-	"fn": {
-		"prefix": "tsfn",
-		"body": [
-			"const ${1:fnName}: ts.lang.core.Fn<{}> = () => {",
-			"\treturn { success: true }$2",
-			"}"
-		]
-	},
-	"fn-types": {
-		"prefix": "tsfntypes",
-		"body": [
-			"dataParamsType: ${1:any},",
-			"dataReturnType: ${2:any},",
-			"$async: ${3:true},"
-		]
-	},
-	"fn-additional-types": {
-		"prefix": "tsfntypesadditional",
-		"body": [
-			"optionalDataParamsType: any,",
-			"optionalDataReturnType: any,",
-			"isDataReturnTypeObject: true,",
-			"plainReturnType: false"
-		]
-	},
-	"fn-with-types": {
-		"prefix": "tsfnwithtypes",
-		"body": [
-			"const ${1:fnName}: ts.lang.core.Fn<{",
-			"\tdataParamsType: ${2:any},",
-			"\tdataReturnType: ${3:any},",
-			"\t$async: ${4:true},",
-			"}> = ${5:async} (params) => {",
-			"\treturn { success: true }$6",
-			"}"
-		]
-	},
-	"fn-async": {
-		"prefix": "tsfnasync",
-		"body": [
-			"const ${1:fnName}: ts.lang.core.Fn<{",
-			"\t$async: true,",
-			"}> = async (params) => {",
-			"\treturn { success: true }$2",
-			"}"
-		]
-	},
-	"returnSuccessTrue": {
-		"prefix": "rst",
-		"body": "return { success: true }"
-	},
-	"returnSuccessFalse": {
-		"prefix": "rsf",
-		"body": "return { success: false }"
-	},
-	"describe": {
-		"prefix": "desc",
-		"body": [
-			"describe('$1', () => {",
-			"\t$2",
-			"})"
-		]
-	},
-	"test": {
-		"prefix": [
-			"test",
-			"tc"
-		],
-		"body": [
-			"test('should $1', () => {",
-			"\t$2",
-			"})"
-		]
-	},
-	"it function": {
-		"prefix": "tit",
-		"body": [
-			"it('should $1', () => {",
-			"\t$2",
-			"})"
-		]
-	},
-	"throw error": {
-		"prefix": "th",
-		"body": "throw { default: {$1} } as \\$Error"
-	},
-	"error message": {
-		"prefix": "errmsg",
-		"body": "(error as \\$Error['$'])!.message"
-	},
-	"error as": {
-		"prefix": "erras",
-		"body": "error as \\$Error['$']"
-	},
-	"error default": {
-		"prefix": "errdef",
-		"body": "\\$Error['$']"
-	},
-	"error assign": {
-		"prefix": "errassign",
-		"body": [
-			"const _error = error as \\$Error['$']",
-			"$dataReturn.\\e![_error?.code || 'default'] = _error!"
 		]
 	},
 	"main function": {

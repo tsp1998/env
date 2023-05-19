@@ -1,0 +1,170 @@
+{
+	"consoleWarn": {
+		"prefix": [
+			"clw"
+		],
+		"body": "console.warn(${1:object})"
+	},
+	"consoleWarnObject": {
+		"prefix": "clwo",
+		"body": "console.warn(`${1:object}`, ${1:object})"
+	},
+	"consoleTimeStart": {
+		"prefix": "clts",
+		"body": "console.time(`${1:name}`)\n$2"
+	},
+	"consoleTimeEnd": {
+		"prefix": "clte",
+		"body": "console.timeEnd(`${1:name}`)\n$2"
+	},
+	"createElement": {
+		"prefix": "dc",
+		"body": "document.createElement('$1')"
+	},
+	"querySelector": {
+		"prefix": "dqs",
+		"body": "document.querySelector(`$1`)"
+	},
+	"querySelectorAll": {
+		"prefix": "dqsa",
+		"body": "document.querySelectorAll(`$1`)"
+	},
+	"bodyQuerySelector": {
+		"prefix": "dbqs",
+		"body": "document.body.querySelector(`$1`)"
+	},
+	"bodyQuerySelectorAll": {
+		"prefix": "dbqsa",
+		"body": "document.body.querySelectorAll(`$1`)"
+	},
+	"const destructure": {
+		"prefix": "condes",
+		"body": [
+			"const { $2 } = $1;"
+		]
+	},
+	"let destructure": {
+		"prefix": "letdes",
+		"body": [
+			"let { $2 } = $1;"
+		]
+	},
+	"jsGetById": {
+		"prefix": "dgi",
+		"body": "document.getElementById('$1')"
+	},
+	"loginfo": {
+		"prefix": "loginfo",
+		"body": "logger.info(`${1:message}`)"
+	},
+	"logdebug": {
+		"prefix": "logdebug",
+		"body": "logger.debug(`${1:message}`)"
+	},
+	"logerror": {
+		"prefix": "logerror",
+		"body": "logger.error(`${1:message}`)"
+	},
+	"logwarn": {
+		"prefix": "logwarn",
+		"body": "logger.warn(`${1:message}`)"
+	},
+	"loginfoobj": {
+		"prefix": "loginfoobj",
+		"body": "logger.info({ message: '$1' })"
+	},
+	"logdebugobj": {
+		"prefix": "logdebugobj",
+		"body": "logger.debug({ message: '$1' })"
+	},
+	"logerrorobj": {
+		"prefix": "logerrorobj",
+		"body": "logger.error({ message: '$1' })"
+	},
+	"logwarnobj": {
+		"prefix": "logwarnobj",
+		"body": "logger.warn({ message: '$1' })"
+	},
+	"cli-util": {
+		"prefix": "cliUtil",
+		"body": [
+			"const [_, __, ${3:argName}] = process.argv\n",
+			"const ${1:utilName} = () => {\n\t$2\n}\n",
+			"${1:utilName}(${3:argName})"
+		]
+	},
+	"export type": {
+		"prefix": "ext",
+		"body": "export type "
+	},
+	"export interface": {
+		"prefix": "expi",
+		"body": "export interface "
+	},
+	"import react": {
+		"prefix": "imr",
+		"body": "import React from 'react'"
+	},
+	"method": {
+		"prefix": "met",
+		"body": "${1:methodName} = (${2:params}) => {$3}"
+	},
+	"custom-global-types": {
+		"prefix": [
+			"customGlobalTypes",
+			"typesCustomGlobal"
+		],
+		"body": [
+			"declare global {",
+			"\tnamespace ts {",
+			"\t\tnamespace ${1:NameSpaceName} {",
+			"\t\t\tnamespace custom {\n\t\t\t\t$2\n\t\t\t}",
+			"\t\t}",
+			"\t}",
+			"}",
+			"export {}"
+		]
+	},
+	"describe": {
+		"prefix": "desc",
+		"body": [
+			"describe('$1', () => {",
+			"\t$2",
+			"})"
+		]
+	},
+	"test": {
+		"prefix": [
+			"test",
+			"tc"
+		],
+		"body": [
+			"test('should $1', () => {",
+			"\t$2",
+			"})"
+		]
+	},
+	"throw error": {
+		"prefix": "th",
+		"body": "throw { default: {$1} } as \\$Error"
+	},
+	"error message": {
+		"prefix": "errmsg",
+		"body": "(error as \\$Error['$'])!.message"
+	},
+	"error as": {
+		"prefix": "erras",
+		"body": "error as \\$Error['$']"
+	},
+	"error default": {
+		"prefix": "errdef",
+		"body": "\\$Error['$']"
+	},
+	"error assign": {
+		"prefix": "errassign",
+		"body": [
+			"const _error = error as \\$Error['$']",
+			"$dataReturn.\\e![_error?.code || 'default'] = _error!"
+		]
+	},
+}

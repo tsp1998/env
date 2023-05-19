@@ -5,23 +5,6 @@
     ],
     "prefix": "mexp"
   },
-  "controllerMethod": {
-    "prefix": "contMethod",
-    "body": [
-      "exports.$1 = async (req, res, next) => {",
-      "\ttry {",
-      "\t\tconst query = {};",
-      "\t\t$2",
-      "\t\tif (!$3) throw new Error($4);",
-      "\t\telse {",
-      "\t\t\treturn res.json({ status: 'success', $5});",
-      "\t\t}",
-      "\t} catch (error) {",
-      "\t\treturn next(error);",
-      "\t}",
-      "};"
-    ]
-  },
   "require": {
     "body": [
       "require('$1')"
@@ -40,15 +23,6 @@
     ],
     "prefix": "rqd"
   },
-  "routerSnippet": {
-    "prefix": "routerSnippet",
-    "body": [
-      "const express = require('express');",
-      "const router = express.Router();\n",
-      "\t$1\n",
-      "module.exports = router;"
-    ]
-  },
   "reqres": {
     "prefix": "reqres",
     "body": [
@@ -65,27 +39,6 @@
       "}"
     ]
   },
-  "expressapp": {
-    "prefix": "expressapp",
-    "body": [
-      "const express = require('express')",
-      "const app = express();",
-      "const PORT = process.env.PORT || ${1:8080};\n",
-      "app.get('/', (req, res) => {",
-      "  res.send('${2:Welcome to Express App}');",
-      "})\n",
-      "app.listen(PORT, () => {",
-      "  console.log(`App is listening on PORT \\${PORT}`);",
-      "})"
-    ]
-  },
-  "fspath": {
-    "prefix": "fspath",
-    "body": [
-      "const fs = require('fs')",
-      "const path = require('path')"
-    ]
-  },
   "httpServerts": {
     "prefix": "httpServerts",
     "body": [
@@ -95,32 +48,6 @@
       "\tres.end('Hello boy!')",
       "})",
       "server.listen(port)",
-    ]
-  },
-  "expressappts": {
-    "prefix": "expressappts",
-    "body": [
-      "import express from 'express'",
-      "const app = express();",
-      "const PORT = process.env.PORT || ${1:8080};\n",
-      "app.get('/', (req, res) => {",
-      "  res.send('${2:Welcome to Express App}');",
-      "})\n",
-      "app.listen(PORT, () => {",
-      "  console.log(`App is listening on PORT \\${PORT}`);",
-      "})"
-    ]
-  },
-  "subapp": {
-    "prefix": [
-      "app",
-      "subapp"
-    ],
-    "body": [
-      "import { Express } from 'express'\n",
-      "export default function ${1:functionName}(app: Express) {",
-      "\timport('./routes/${2:routerFile}').then(module => app.use('/api/${3:endpoint}', module.default))",
-      "}"
     ]
   },
   "corsHeadersSet": {

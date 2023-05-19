@@ -35,8 +35,8 @@
       "}"
     ]
   },
-  "flex-shortcut": {
-    "prefix": "dflex",
+  "flex-center-shortcut": {
+    "prefix": "flexcenter",
     "body": [
       "display:flex;",
       "justify-content:center;",

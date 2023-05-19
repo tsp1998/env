@@ -5,6 +5,10 @@
 			"path": "../../../royaltsp/royaltsp-ts"
 		},
 		{
+			"name": "projects",
+			"path": "../../../projects"
+		},
+		{
 			"name": "automation",
 			"path": "../../../automation"
 		},
@@ -49,11 +53,12 @@
 			"path": "../.."
 		},
 		{
+			"name": "royaltsp-c",
 			"path": "../../../royaltsp/royaltsp-c"
 		}
 	],
 	"settings": {
 		"liveServer.settings.multiRootWorkspaceName": "royaltsp-ts",
-		"liveServer.settings.port": 3001
+		"liveServer.settings.port": 3000
 	}
 }
