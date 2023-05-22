@@ -29,7 +29,10 @@
 		]
 	},
 	"promise": {
-		"prefix": ["promise", "newPromise"],
+		"prefix": [
+			"promise",
+			"newPromise"
+		],
 		"body": "new Promise((resolve, reject) => {$1})"
 	},
 	"sti": {
@@ -102,7 +105,7 @@
 		],
 		"body": [
 			"declare global {",
-			"\tnamespace \\$${1:NameSpaceName} {\n\t\t$2\n\t}",
+			"\tnamespace \\$${1:NamespaceName} {\n\t\t$2\n\t}",
 			"}",
 			"export {}"
 		]
@@ -110,23 +113,44 @@
 	"fn": {
 		"prefix": "fn",
 		"body": [
-			"const ${1:fnName} = (${2:${3:paramName}S: \\$fn.FnP<${4:ParamType}>}) => {",
+			"const ${1:fnName} = async <U>(${2:${3:paramName}S: \\$fn.FnP<${4:ParamType}>}): Promise<\\$fn.FnR<{ results: \\$fn.FnPO<U> }>> => {",
 			"\t/* please pass param as [param] if it's object */",
-			"\tconst isArray = Array.isArray(${3:paramName}S)",
 			"\ttype O = \\$fn.FnPO<${4:ParamType}>",
+			"\tconst results: \\$fn.FnPO<U> = {}",
+			"\tconst es: \\$fn.FnPO<\\$Error> = {}",
+			"\tconst isArray = Array.isArray(${3:paramName}S)",
 			"\tif (!isArray && typeof ${3:paramName}S !== 'object') {",
 			"\t\t${3:paramName}S = [${3:paramName}S]",
 			"\t}",
 			"\tconst keys = Object.keys(${3:paramName}S)",
 			"\t/* initial setup done */\n",
-			"\tif (isArray) {",
-			"\t\tfor (let i = 0; i < keys.length; i++) {",
-			"\t\t\tconst value = (${3:paramName}S as O)[keys[i]]",
-			"\t\t\t${5:/* code */}",
+			"\tfor (let i = 0; i < keys.length; i++) {",
+			"\t\tconst key = keys[i]",
+			"\t\ttry {",
+			"\t\t\tconst ${3:paramName} = (${3:paramName}S as O)[key]",
+			"\t\t\tresults[key] = $5",
+			"\t\t} catch (error) {",
+			"\t\t\tes[key] = \\$fns.errorToObject(error as Error)",
 			"\t\t}",
-			"\t}",
-			"}",
+			"\t}\n",
+			"\treturn { results, es }",
+			"}\n",
+			"// export default ${1:fnName}"
 		]
+	},
+	"sequential-parallel-helper": {
+		"prefix": [
+			"promisesp"
+		],
+		"body": [
+			"const { es: _es, results: _results } = await sequentialParallelHelper<U>(results as \\$fn.FnPAO<Promise<unknown>>, keys, parallel!)",
+			"addKeysIfNotExist(es, _es)",
+			"return { results: _results, es: _es }"
+		]
+	},
+	"fn refactored return": {
+		"prefix": "fnrr",
+		"body": "return { results: _results, es: _es }"
 	},
 	"main function": {
 		"prefix": "mainfn",
@@ -157,5 +181,9 @@
 			"tsptest.tests.${2:testName} = () => {\n\t$3\n}\n",
 			"tsptest.runTests()",
 		]
+	},
+	"import start end block": {
+		"prefix": "imse",
+		"body": "/* imports start */\n$1\n/* imports end */"
 	}
 }

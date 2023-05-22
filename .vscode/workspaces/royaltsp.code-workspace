@@ -37,10 +37,6 @@
 			"path": "../../../libs"
 		},
 		{
-			"name": "static-data",
-			"path": "../../../static-data"
-		},
-		{
 			"name": "logs",
 			"path": "../../../logs"
 		},
@@ -55,6 +51,9 @@
 		{
 			"name": "royaltsp-c",
 			"path": "../../../royaltsp/royaltsp-c"
+		},
+		{
+			"path": "../../../static"
 		}
 	],
 	"settings": {
