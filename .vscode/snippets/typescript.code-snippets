@@ -74,6 +74,14 @@
 		"prefix": "imdas",
 		"body": "import { $2 as $3 } from '${1:module}'"
 	},
+	"import module with function": {
+		"prefix": "impf",
+		"body": "const { default: ${2:moduleName} } = await import('${1:module}')"
+	},
+	"import named modules function": {
+		"prefix": "imdf",
+		"body": "const { ${2:moduleName} } = await import('${1:module}')"
+	},
 	"export": {
 		"prefix": "ex",
 		"body": "export "
@@ -172,7 +180,7 @@
 			"promisesp"
 		],
 		"body": [
-			"const { es: _es, results: _results } = await sequentialParallelHelper<U>(results as \\$fn.FnPAO<Promise<unknown>>, keys, parallel!)",
+			"const { es: _es, results: _results } = await sequentialParallelHelper<U>(results as \\$fn.FnPAO<Promise<unknown>>, { keys, parallel })",
 			"addKeysIfNotExist(es, _es)",
 			"return { results: _results, es: _es }"
 		]
