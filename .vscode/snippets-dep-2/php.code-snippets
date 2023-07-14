@@ -1,0 +1,14 @@
+{
+	"php": {
+		"prefix": [
+			"php"
+		],
+		"body": "<?php $1 ?>"
+	},
+	"php echo": {
+		"prefix": [
+			"phpecho"
+		],
+		"body": "<?php echo $1; ?>"
+	}
+}

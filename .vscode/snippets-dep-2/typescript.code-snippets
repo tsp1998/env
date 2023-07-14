@@ -121,7 +121,7 @@
 	"fn simple": {
 		"prefix": "fnsimple",
 		"body": [
-			"const ${1:fnName} = async <U>(${2:${3:paramName}S: \\$fn.FnP<${4:ParamType}>}): Promise<\\$fn.FnR<{ results: \\$fn.FnPO<U> }>> => {",
+			"const ${1:fnName} = async <U>(${2:${3:paramName}S: \\$fn.FnP<${4:ParamType}>}): \\$fn.FnRRPromise<U> => {",
 			"\t/* please pass param as [param] if it's object */",
 			"\ttype O = \\$fn.FnPO<${4:ParamType}>",
 			"\tconst results: \\$fn.FnPO<U> = {}",
@@ -149,7 +149,7 @@
 	"fn advance": {
 		"prefix": "fn",
 		"body": [
-			"const ${1:fnName} = async <U>(${2:${3:paramName}S: \\$fn.FnP<${4:ParamType}>}, value?: ${4:ParamType}, \\$do: Partial<{\n\tkeysAreKeys: boolean\n}> = {}): Promise<\\$fn.FnR<{ results: \\$fn.FnPO<U> }>> => {",
+			"const ${1:fnName} = async <U>(${2:${3:paramName}S: \\$fn.FnP<${4:ParamType}>}, value?: ${4:ParamType}, \\$do: Partial<{\n\tkeysAreKeys: boolean\n}> = {}): \\$fn.FnRRPromise<U> => {",
 			"\t/* please pass param as [param] if it's object */",
 			"\ttype O = \\$fn.FnPO<${4:ParamType}>",
 			"\tconst results: \\$fn.FnPO<U> = {}",

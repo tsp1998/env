@@ -5,6 +5,10 @@
 			"path": "../../../royaltsp/royaltsp-ts"
 		},
 		{
+			"name": "extensions",
+			"path": "../../../extensions"
+		},
+		{
 			"name": "projects",
 			"path": "../../../projects"
 		},
@@ -53,11 +57,12 @@
 			"path": "../../../royaltsp/royaltsp-c"
 		},
 		{
+			"name": "static",
 			"path": "../../../static"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "royaltsp-ts",
+		"liveServer.settings.multiRootWorkspaceName": "royaltsp-html",
 		"liveServer.settings.port": 3000
 	}
 }
