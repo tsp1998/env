@@ -1,0 +1,26 @@
+{
+    "jsDoc": {
+        "prefix": "jsd",
+        "body": "/** $0 */"
+    },
+    "jsDocType": {
+        "prefix": "jsdt",
+        "body": "/** @type {$0} */"
+    },
+    "log with name": {
+        "prefix": "clo",
+        "body": "console.log(`${1:value}`, ${1:value})"
+    },
+    "import": {
+        "prefix": "imp",
+        "body": "import ${2:exportName} from '${1:module}'"
+    },
+    "export-default": {
+        "prefix": "expd",
+        "body": "export default ${1:module}"
+    },
+    "export-const": {
+        "prefix": "expc",
+        "body": "export const ${1:module}"
+    }
+}

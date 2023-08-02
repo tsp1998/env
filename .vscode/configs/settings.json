@@ -10,9 +10,19 @@
     "window.restoreFullscreen": true,
     "window.titleBarStyle": "custom",
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Tomorrow Night Blue",
     "svelte.enable-ts-plugin": true,
     "explorer.compactFolders": false,
     "workbench.tree.indent": 15,
-    "workbench.editor.labelFormat": "medium"
+    "workbench.editor.labelFormat": "short",
+    "editor.linkedEditing": true,
+    "workbench.colorTheme": "Red",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "tailwindCSS.experimental.classRegex": [
+        "class:(.+)",
+        "className\\:\\s*'([^']*)'",
+        ["\\S*[Cc]lass[nN]ame\\S* = \\[([\\s\\S]+?)(?=][\\n;.])", "'([^']*)'"],
+        "\\S*[Cc]lass[nN]ame\\S* ?[:=] ['`](.*)['`]",
+        "\\S*[Cc]lass\\S* ?[:=] ['`](.*)['`]",
+        ["\\S*[Cc]lass[nN]ame\\S* = {([\\s\\S]+?)}\\s", "'([^']*)'"]
+    ]
 }
