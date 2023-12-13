@@ -1,6 +1,6 @@
-import os from 'os'
-import fs from 'fs'
-import path from 'path'
+const os = require('os')
+const fs = require('fs')
+const path = require('path')
 const localConfigFolderPath = path.resolve(__dirname, '..', '..', 'configs')
 let configFolderPath = ''
 const platform = os.platform();
@@ -18,7 +18,7 @@ switch (true) {
 if (!fs.existsSync(configFolderPath)) {
   fs.mkdirSync(configFolderPath)
 }
-const configFiles: string[] = fs.readdirSync(localConfigFolderPath)
+const configFiles = fs.readdirSync(localConfigFolderPath)
 configFiles.forEach(configFile => {
   const srcFilePath = path.join(localConfigFolderPath, configFile)
   const destFilePath = path.join(configFolderPath, configFile)

@@ -1,0 +1,10 @@
+{
+    "describe": {
+        "prefix": "des",
+        "body": "describe('$1', () => {\n\t$2\n})"
+    },
+    "test": {
+        "prefix": "t",
+        "body": "test('$1', () => {\n\t$2\n})"
+    },
+}

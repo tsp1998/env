@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "tspsoft",
+			"path": "../../../tspsoft"
+		},
+		{
+			"name": ".tspsoft",
+			"path": "../../../../.tspsoft"
+		}
+	],
+	"settings": {}
+}

@@ -8,8 +8,16 @@
         "body": "/** @type {$0} */"
     },
     "log with name": {
-        "prefix": "clo",
+        "prefix": "logv",
         "body": "console.log(`${1:value}`, ${1:value})"
+    },
+    "log with logger": {
+        "prefix": "ll",
+        "body": "global.\\$logger.log(${1:value})"
+    },
+    "log with name logger": {
+        "prefix": "llv",
+        "body": "global.\\$logger.log(`${1:value}`, ${1:value})"
     },
     "import": {
         "prefix": "imp",
@@ -22,5 +30,29 @@
     "export-const": {
         "prefix": "expc",
         "body": "export const ${1:module}"
+    },
+    "return error": {
+        "prefix": "reterr",
+        "body": "return { e: error as Error }"
+    },
+    "return data": {
+        "prefix": "retdata",
+        "body": "return { d: ${1:d} }"
+    },
+    "web": {
+        "prefix": "web",
+        "body": "/* @web */"
+    },
+    "rn": {
+        "prefix": "rnc",
+        "body": "// /* @rn */"
+    },
+    "rn ignore": {
+        "prefix": "rnci",
+        "body": "// @rn-ignore"
+    },
+    "use client": {
+        "prefix": "uc",
+        "body": "'use client'"
     }
 }

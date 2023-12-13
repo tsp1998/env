@@ -5,9 +5,9 @@
   "scripts": {
     "style:build": "sass ./styles/custom.scss ./styles/custom.css",
     "style:dev": "sass -w ./styles/custom.scss ./styles/custom.css",
-    "cs": "bun ./src/utils/copy-snippets.ts",
-    "cc": "bun ./src/utils/copy-configs.ts",
-    "bc": "bun ./src/utils/copy-configs.ts rev"
+    "cs": "node ./src/utils/copy-snippets.cjs",
+    "cc": "node ./src/utils/copy-configs.cjs",
+    "bc": "node ./src/utils/copy-configs.cjs rev"
   },
   "keywords": [],
   "author": "Shubham Tandale",
