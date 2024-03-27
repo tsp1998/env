@@ -1,13 +1,13 @@
 {
-    "fn component": {
-        "prefix": "rfc",
-        "body": [
-            "const ${1:Component} = (props: ${2:\\$cmp.Props}) => {",
-            "\treturn (",
-            "\t\t<$3>$4</$3>",
-            "\t)",
-            "}\n",
-            "export default ${1:Component}",
-        ]
+  "fn component react": {
+    "prefix": "rfc",
+    "body": [
+      "const ${1:Component} = (props: ${2:\\$frontend.Props}) => {",
+      "\treturn (",
+      "\t\t<$3>$4</$3>",
+      "\t)",
+      "}\n",
+      "export default ${1:Component}",
+    ]
     }
 }

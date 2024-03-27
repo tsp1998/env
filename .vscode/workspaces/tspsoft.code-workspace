@@ -7,6 +7,9 @@
 		{
 			"name": ".tspsoft",
 			"path": "../../../../.tspsoft"
+		},
+		{
+			"path": "../../../../.secrets"
 		}
 	],
 	"settings": {}
