@@ -1,9 +1,9 @@
 {
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "Operator Mono Lig",
+    // "editor.fontFamily": "Operator Mono Lig",
     // "editor.fontFamily": "Operator Mono Book",
     // "editor.fontFamily": "Cascadia Code SemiLight",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": "'calt', 'ss01'",
     "editor.fontSize": 16,
     "editor.fontWeight": "500",
     "explorer.confirmDelete": false,
@@ -29,5 +29,9 @@
     ],
     "editor.tabSize": 2,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Default Light Modern"
+    "mojo.modularHomePath": "/home/royaltsp/.modular",
+    "html.customData": [
+        "/home/royaltsp/tsp/tspsoft-v4/.vscode/custom/html.json"
+    ],
+    "javascript.preferences.importModuleSpecifierEnding": "js"
 }

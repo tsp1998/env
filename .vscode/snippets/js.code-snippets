@@ -7,6 +7,14 @@
     "prefix": "jsdt",
     "body": "/** @type {$1} */$2"
   },
+  "jsDocTypeMultiLine": {
+    "prefix": "jsdtm",
+    "body": [
+      "/** ",
+      "@type {$1}",
+      "*/$2"
+    ]
+  },
   "log with name": {
     "prefix": "logv",
     "body": "console.log(`${1:value}`, ${1:value})"
