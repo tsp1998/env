@@ -1,0 +1,46 @@
+{
+  "jsDocReturnType": {
+    "prefix": "jsdr",
+    "body": "/** @return {$1} */$2"
+  },
+  "jsDocTypeMultiLine": {
+    "prefix": "jsdtm",
+    "body": [
+      "/** ",
+      "@type {$1}",
+      "*/$2"
+    ]
+  },
+  "log with name logger": {
+    "prefix": "llv",
+    "body": "global.\\$logger.log(`${1:value}`, ${1:value})"
+  },
+  "return error": {
+    "prefix": "reterr",
+    "body": "return { e: error as Error }"
+  },
+  "return data": {
+    "prefix": "retdata",
+    "body": "return { d: ${1:d} }"
+  },
+  "web": {
+    "prefix": "web",
+    "body": "/* @web */"
+  },
+  "rn": {
+    "prefix": "rnc",
+    "body": "// /* @rn */"
+  },
+  "rn ignore": {
+    "prefix": "rnci",
+    "body": "// @rn-ignore"
+  },
+  "use client": {
+    "prefix": "uc",
+    "body": "'use client'"
+  },
+  "script:ts": {
+    "prefix": "scr",
+    "body": "<script lang=\"ts\">$1</script>"
+  }
+}

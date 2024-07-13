@@ -2,13 +2,12 @@
   "fn component react": {
     "prefix": "rfc",
     "body": [
-      "/** @type {\\$Comp<${2:\\$frontend.Props}>} */",
-      "const ${1:Component} = (props) => {",
+      "const ${1:Component} = (props: ${2:\\$frontend.Props}) => {",
       "\treturn (",
       "\t\t<$3>$4</$3>",
       "\t)",
       "}\n",
       "export default ${1:Component}",
     ]
-  }
+    }
 }

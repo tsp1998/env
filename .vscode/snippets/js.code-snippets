@@ -1,35 +1,31 @@
 {
-  "jsDocReturnType": {
-    "prefix": "jsdr",
-    "body": "/** @return {$1} */$2"
+  "homePath": {
+    "prefix": "hr",
+    "body": "\"/home/royaltsp$1\""
+  },
+  "tspProjectPath": {
+    "prefix": "hrt",
+    "body": "\"/home/royaltsp/tsp/tspsoft-v4$1\""
   },
   "jsDocType": {
     "prefix": "jsdt",
     "body": "/** @type {$1} */$2"
   },
-  "jsDocTypeMultiLine": {
-    "prefix": "jsdtm",
-    "body": [
-      "/** ",
-      "@type {$1}",
-      "*/$2"
-    ]
-  },
   "log with name": {
-    "prefix": "logv",
+    "prefix": "lgv",
     "body": "console.log(`${1:value}`, ${1:value})"
-  },
-  "log with name logger": {
-    "prefix": "llv",
-    "body": "global.\\$logger.log(`${1:value}`, ${1:value})"
   },
   "import": {
     "prefix": "imp",
-    "body": "import ${2:exportName} from '${1:module}'"
+    "body": "import ${2:exportName} from \"${1:module}\""
   },
   "import fn": {
     "prefix": "imfn",
-    "body": "import ('${1:exportName}')$2"
+    "body": "import (\"${1:exportName}\")$2"
+  },
+  "export-default-cjs": {
+    "prefix": "mexp",
+    "body": "module.exports = ${1:module}"
   },
   "export-default": {
     "prefix": "expd",
@@ -39,36 +35,8 @@
     "prefix": "expc",
     "body": "export const ${1:module}"
   },
-  "return error": {
-    "prefix": "reterr",
-    "body": "return { e: error as Error }"
-  },
-  "return data": {
-    "prefix": "retdata",
-    "body": "return { d: ${1:d} }"
-  },
-  "web": {
-    "prefix": "web",
-    "body": "/* @web */"
-  },
   "tw": {
     "prefix": "tw",
-    "body": "/* tw */'$1'"
-  },
-  "rn": {
-    "prefix": "rnc",
-    "body": "// /* @rn */"
-  },
-  "rn ignore": {
-    "prefix": "rnci",
-    "body": "// @rn-ignore"
-  },
-  "use client": {
-    "prefix": "uc",
-    "body": "'use client'"
-  },
-  "script:ts": {
-    "prefix": "scr",
-    "body": "<script lang=\"ts\">$1</script>"
+    "body": "/* tw */\"$1\""
   }
 }
