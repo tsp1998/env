@@ -1,14 +1,13 @@
 {
     "editor.mouseWheelZoom": true,
-    // "editor.fontFamily": "Ubuntu",
+    "editor.fontFamily": "Fira Code",
     // "editor.fontFamily": "Operator Mono Lig",
     // "editor.fontFamily": "Operator Mono Book",
     // "editor.fontFamily": "Cascadia Code SemiLight",
-    // "editor.fontFamily": "FreeMono",
     "editor.fontLigatures": "'calt', 'ss01'",
     "editor.fontSize": 16,
     // "editor.letterSpacing": 1.5,
-    "editor.fontWeight": "500",
+    "editor.fontWeight": "400",
     "explorer.confirmDelete": false,
     "editor.wordWrap": "on",
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -21,25 +20,23 @@
     "workbench.editor.labelFormat": "short",
     "editor.linkedEditing": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "tailwindCSS.experimental.classRegex": [
-        "\\S*[Cc]lass\\S*\\s*[:=+]=?\\s*['`\"](.*)['`\"]",
-        "\\S*[Cc]lass[nN]ame\\S*\\s*[:=+]=?\\s*['`\"](.*)['`\"]",
-        "\\S*[Cc][nN]\\S*\\s*?[:=+]=?\\s*['`\"](.*)['`\"]",
-        ":*\\s*\\/\\*\\s*tw\\s*\\*\\/\\s*['`\"](.*)['`\"]",
-        // "\\S*[Cc][nN]\\S*\\s*?[:=]\\s*[\"`](.*)[\"`]"
-        // "\\S*[Cc]lass[nN]ame\\S*\\s*[:=]\\s*[\"`](.*)[\"`]",
-        // "\\S*[Cc]lass\\S*\\s*[:=]\\s*[\"`](.*)[\"`]",
-    ],
     "editor.tabSize": 2,
     "workbench.iconTheme": "material-icon-theme",
-    "mojo.modularHomePath": "/home/royaltsp/.modular",
     "html.customData": [
         "/home/royaltsp/tsp/tspsoft-v4/.vscode/custom/html.json"
     ],
     "javascript.preferences.importModuleSpecifierEnding": "js",
+    "[astro]": {
+        "javascript.preferences.importModuleSpecifierEnding": "js"
+    },
     "path-intellisense.mappings": {
         "/": "/"
     },
-    "workbench.colorTheme": "Cyberpunk",
-    "update.showReleaseNotes": false
+    "update.showReleaseNotes": false,
+    "javascript.preferences.quoteStyle": "double",
+    "typescript.preferences.quoteStyle": "double",
+    "workbench.colorTheme": "Default Light Modern",
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/royaltsp/.nvm/versions/node/v20.12.2/bin:${env:PATH}"
+    }
 }
