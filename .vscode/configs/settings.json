@@ -1,42 +1,31 @@
 {
-    "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "Fira Code",
-    // "editor.fontFamily": "Operator Mono Lig",
-    // "editor.fontFamily": "Operator Mono Book",
-    // "editor.fontFamily": "Cascadia Code SemiLight",
-    "editor.fontLigatures": "'calt', 'ss01'",
-    "editor.fontSize": 16,
-    // "editor.letterSpacing": 1.5,
-    "editor.fontWeight": "400",
-    "explorer.confirmDelete": false,
-    "editor.wordWrap": "on",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDragAndDrop": false,
-    "window.restoreFullscreen": true,
-    "window.titleBarStyle": "custom",
     "workbench.startupEditor": "none",
-    "explorer.compactFolders": false,
-    "workbench.tree.indent": 15,
-    "workbench.editor.labelFormat": "short",
-    "editor.linkedEditing": true,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "editor.tabSize": 2,
-    "workbench.iconTheme": "material-icon-theme",
-    "html.customData": [
-        "/home/royaltsp/tsp/tspsoft-v4/.vscode/custom/html.json"
-    ],
-    "javascript.preferences.importModuleSpecifierEnding": "js",
-    "[astro]": {
-        "javascript.preferences.importModuleSpecifierEnding": "js"
-    },
+    "extensions.autoUpdate": false,
     "path-intellisense.mappings": {
         "/": "/"
     },
-    "update.showReleaseNotes": false,
-    "javascript.preferences.quoteStyle": "double",
-    "typescript.preferences.quoteStyle": "double",
-    "workbench.colorTheme": "Default Light Modern",
-    "terminal.integrated.env.linux": {
-        "PATH": "/home/royaltsp/.nvm/versions/node/v20.12.2/bin:${env:PATH}"
-    }
+    "explorer.confirmDelete": false,
+    "editor.mouseWheelZoom": true,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "Monokai",
+    "javascript.suggest.classMemberSnippets.enabled": false,
+    "typescript.suggest.classMemberSnippets.enabled": false,
+    "typescript.suggest.objectLiteralMethodSnippets.enabled": false,
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "class:list",
+        "_class",
+        "_className"
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "tailwindCSS.experimental.classRegex": [
+        ":*\\s*\\/\\*\\s*tw\\s*\\*\\/\\s*['`\"](.*)['`\"]"
+    ]
 }

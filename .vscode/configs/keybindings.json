@@ -31,16 +31,6 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+enter",
-        "command": "-colonize.endline",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+enter",
-        "command": "-colonize.newline",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+shift+/",
         "command": "editor.action.blockComment",
         "when": "editorTextFocus && foldingEnabled"
@@ -57,5 +47,13 @@
     {
         "key": "ctrl+alt+m",
         "command": "workbench.files.action.createFileFromExplorer"
+    },
+    {
+        "key": "ctrl+meta+q",
+        "command": "workbench.action.quit"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
     }
 ]
