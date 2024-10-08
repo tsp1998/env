@@ -2,7 +2,7 @@
   "fn component react": {
     "prefix": "rfc",
     "body": [
-      "/** @type {\\$Comp<${2:\\$frontend.Props}>} */",
+      "/** @type {\\$TSPComp<${2:{\\}}>} */",
       "const ${1:Component} = (props) => {",
       "\treturn (",
       "\t\t<$3>$4</$3>",
