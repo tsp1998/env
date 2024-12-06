@@ -15,13 +15,37 @@
     "prefix": "jsdtd",
     "body": "/** @typedef {$2} $1 */$3"
   },
+  "reactSourceJSX": {
+    "prefix": "jsxreact",
+    "body": "//\\$tspreact"
+  },
   "preactSourceJSX": {
     "prefix": "jsxpreact",
-    "body": "//\\$preact"
+    "body": "//\\$tsppreact"
   },
   "solidSourceJSX": {
     "prefix": "jsxsolid",
-    "body": "//\\$solid"
+    "body": "//\\$tspsolid"
+  },
+  "rnSourceJSX": {
+    "prefix": "jsxrn",
+    "body": "//\\$rn"
+  },
+  "devCommentStart": {
+    "prefix": "devs",
+    "body": "/* dev{ */"
+  },
+  "devCommentEnd": {
+    "prefix": "deve",
+    "body": "/* dev} */"
+  },
+  "trimCommentStart": {
+    "prefix": "trims",
+    "body": "/* trim{ */"
+  },
+  "trimeCommentEnd": {
+    "prefix": "trime",
+    "body": "/* trim} */"
   },
   "log with name": {
     "prefix": "lgv",
