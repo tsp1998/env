@@ -4,8 +4,12 @@
     "body": "\"/home/royaltsp$1\""
   },
   "tspProjectPath": {
-    "prefix": "hrt",
+    "prefix": "hrt4",
     "body": "\"/home/royaltsp/tsp/tspsoft-v4$1\""
+  },
+  "tspProjectPath5": {
+    "prefix": "hrt",
+    "body": "\"/home/royaltsp/tsp/tspsoft-v5$1\""
   },
   "jsDocType": {
     "prefix": "jsdt",
