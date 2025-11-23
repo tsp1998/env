@@ -9,7 +9,7 @@
   },
   "tspProjectPath5": {
     "prefix": "hrt",
-    "body": "\"/home/royaltsp/tsp/tspsoft-v5$1\""
+    "body": "\"/home/royaltsp/tsp/tspsoftwares$1\""
   },
   "jsDocType": {
     "prefix": "jsdt",
@@ -50,6 +50,10 @@
   "trimeCommentEnd": {
     "prefix": "trime",
     "body": "/* trim} */"
+  },
+  "prodOnly": {
+    "prefix": "prod",
+    "body": "/* prod{ $1 } */"
   },
   "log with name": {
     "prefix": "lgv",

@@ -1,0 +1,20 @@
+{
+  "fn component react": {
+    "prefix": "rfc",
+    "body": [
+      "/** @type {\\$TSPCompV2<${2:{\\}}>} */",
+      "const ${1:PageOrComp} = (props) => {",
+      "\treturn (",
+      "\t\t<$3>$4</$3>",
+      "\t)",
+      "}\n",
+      "export default ${1:PageOrComp}"
+    ]
+  },
+  "tailwind import": {
+    "prefix": "twi",
+    "body": [
+      "import \"/home/royaltsp/tsp/tspsoftwares/ui/tailwind/tailwind.css\";"
+    ]
+  }
+}

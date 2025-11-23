@@ -1,9 +1,6 @@
 {
     "workbench.startupEditor": "none",
     "extensions.autoUpdate": false,
-    "path-intellisense.mappings": {
-        "/": "/"
-    },
     "explorer.confirmDelete": false,
     "editor.mouseWheelZoom": true,
     "editor.fontLigatures": true,
@@ -13,7 +10,6 @@
     "editor.wordWrap": "on",
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.colorTheme": "Monokai",
     "javascript.suggest.classMemberSnippets.enabled": false,
     "typescript.suggest.classMemberSnippets.enabled": false,
     "typescript.suggest.objectLiteralMethodSnippets.enabled": false,
@@ -27,5 +23,8 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "tailwindCSS.experimental.classRegex": [
         ":*\\s*\\/\\*\\s*tw\\s*\\*\\/\\s*['`\"](.*)['`\"]"
-    ]
+    ],
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "editor.experimental.treeSitterTelemetry": false
 }

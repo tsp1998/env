@@ -7,7 +7,9 @@
     "style:dev": "sass -w ./styles/custom.scss ./styles/custom.css",
     "cs": "node ./src/utils/copy-snippets.cjs",
     "cc": "node ./src/utils/copy-configs.cjs",
-    "bc": "node ./src/utils/copy-configs.cjs rev"
+    "csa": "node ./src/utils/copy-snippets.cjs /home/royaltsp/.config/Antigravity/User/snippets",
+    "cca": "node ./src/utils/copy-configs.cjs /home/royaltsp/.config/Antigravity/User",
+    "bc": "node ./src/utils/copy-configs.cjs --rev"
   },
   "keywords": [],
   "author": "Shubham Tandale",
