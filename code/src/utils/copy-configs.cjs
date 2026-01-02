@@ -29,17 +29,13 @@ configFiles.forEach(configFile => {
   const srcFilePath = path.join(localConfigFolderPath, configFile)
   const destFilePath = path.join(configFolderPath, configFile)
 
+  const content = isRev ? fs.readFileSync(destFilePath, "utf-8") : JSON.stringify(require(srcFilePath), null, 2)
+
   if (fs.existsSync(destFilePath)) {
     if (isRev) {
-      fs.rmSync(srcFilePath)
+      fs.writeFileSync(srcFilePath, content, "utf-8")
     } else {
-      fs.rmSync(destFilePath)
+      fs.writeFileSync(destFilePath, content, "utf-8")
     }
-  }
-
-  if (isRev) {
-    fs.copyFileSync(destFilePath, srcFilePath)
-  } else {
-    fs.copyFileSync(srcFilePath, destFilePath)
   }
 })
