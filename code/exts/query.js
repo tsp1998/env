@@ -1,0 +1,1 @@
+Array.from($0.childNodes).map(a => `${a.querySelector('.name').textContent} by ${a.querySelector('.publisher-name').textContent}: ${a.querySelector('.description').textContent} `)
